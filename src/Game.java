@@ -27,8 +27,8 @@ public class Game {
 	public static void flipMultiple(int x) {
 		int index = 1;
 		while (index <= x) {
-			int res = flipCoin();
-			if (res == 0) {
+			int coinFlips = flipCoin();
+			if (coinFlips == 0) {
 				heads++;
 				System.out.println("Toss #" + index + ": Heads");
 			}
