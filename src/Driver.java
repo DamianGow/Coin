@@ -5,7 +5,7 @@ public class Driver {
 	   static Scanner scnr = new Scanner(System.in);
 	   public static void main(String[] args) {
 		   try {
-		   System.out.println("Your current coin is silver, input 'y' to switch, otherwise, input a number of times to flip");
+			   printLine.print("Your current coin is silver, input 'y' to switch, otherwise, input a number of times to flip");
 		   String switchChoice = scnr.next();
 		   if (switchChoice.equals("y")) {
 			   Game.switchCoin();
@@ -18,7 +18,7 @@ public class Driver {
 			   Game.flipMultiple(flipTotal);
 		   }
 		   } catch (InputMismatchException e) {
-			   System.out.println("You inputted something incorrectly, please try again");
+			   printLine.print("You inputted something incorrectly, please try again");
 		   }
 	   }
 	   

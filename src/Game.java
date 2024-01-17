@@ -30,10 +30,10 @@ public class Game {
 			int coinFlips = flipCoin();
 			if (coinFlips == 0) {
 				heads++;
-				System.out.println("Toss #" + index + ": Heads");
+				printLine.print("Toss #" + index + ": Heads");
 			}
 			else {
-				System.out.println("Toss #" + index + ": Tails");
+				printLine.print("Toss #" + index + ": Tails");
 				tails++;
 			}
 			index++;
@@ -55,8 +55,8 @@ public class Game {
 	}
 	}
 	public static void totals() {
-		System.out.println("Total Heads: " + heads);
-		System.out.println("Total Tails: " + tails);
+		printLine.print("Total Heads: " + heads);
+		printLine.print("Total Tails: " + tails);
 	}
 	public static void showPic(String pic) {
 		JFrame jframe = new JFrame();
@@ -80,11 +80,11 @@ public class Game {
 	public static void switchCoin() {
 		if (picPathChoose.equals("_silver.png")) {
 			picPathChoose = "_gold.png";
-			System.out.println("Your current coin is gold.");
+			printLine.print("Your current coin is gold.");
 		}
 		else {
 			picPathChoose = "_silver.png";
-			System.out.println("Your current coin is silver.");
+			printLine.print("Your current coin is silver.");
 		}
 	}
 }
