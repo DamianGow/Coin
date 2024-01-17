@@ -50,12 +50,14 @@ public class Game {
 			}
 		}
 		else {
-		System.out.println("Total Heads: " + heads);
-		System.out.println("Total Tails: " + tails);
+			totals();
 
 	}
 	}
-	
+	public static void totals() {
+		System.out.println("Total Heads: " + heads);
+		System.out.println("Total Tails: " + tails);
+	}
 	public static void showPic(String pic) {
 		JFrame jframe = new JFrame();
 		 jframe.setSize(280, 400); 
