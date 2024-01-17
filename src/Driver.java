@@ -14,17 +14,12 @@ public class Driver {
 			   Game.secret();
 		   }
 		   else {
-			   int flipTotal = flip();
-			   Game.flipMultiple(flipTotal);
+			   int flips = Integer.parseInt(switchChoice);
+			   Game.flipMultiple(flips);
 		   }
 		   } catch (InputMismatchException e) {
 			   printLine.print("You inputted something incorrectly, please try again");
 		   }
 	   }
 	   
-	   public static int flip() {
-		   
-		   int x =  scnr.nextInt();
-		   return x;
-	   }
 }

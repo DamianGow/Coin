@@ -24,11 +24,10 @@ public class Game {
 		}
 	}
 	
-	public static void flipMultiple(int x) {
-		int index = 1;
-		while (index <= x) {
-			int coinFlips = flipCoin();
-			if (coinFlips == 0) {
+	public static void flipMultiple(int flipCount) {
+		
+		for( int index = 1; index <= flipCount; index++) {
+			if (flipCoin() == 0) {
 				heads++;
 				printLine.print("Toss #" + index + ": Heads");
 			}
@@ -36,10 +35,9 @@ public class Game {
 				printLine.print("Toss #" + index + ": Tails");
 				tails++;
 			}
-			index++;
 			
 		}
-		if (x == 1) {
+		if (flipCount == 1) {
 			if (heads == 1) {
 				String pic = "heads";
 				showPic(pic);
@@ -49,6 +47,7 @@ public class Game {
 				showPic(pic);
 			}
 		}
+	
 		else {
 			totals();
 
